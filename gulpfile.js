@@ -8,21 +8,22 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var order = require('gulp-order');
 var rename = require('gulp-rename');
-var bourbon = require('node-bourbon').includePaths;
-var neat = require('node-neat').includePaths;
+//var bourbon = require('node-bourbon').includePaths;
+//var neat = require('node-neat').includePaths;
 
 gulp.task('default', ['css', 'watch', 'js']);
 
 gulp.task('css', function(){
     return gulp.src('./assets/scss/app.scss')
-        .pipe(sass({
-            includePaths: neat
-        }))
+        //.pipe(sass({
+        //    includePaths: neat
+        //}))
+        .pipe(sass())
         .pipe(prefixer('last 15 version'))
-        .pipe(gulp.dest('./assets/css'))
+        .pipe(gulp.dest('./assets/css/src'))
         .pipe(minify())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('./assets/css'))
+        .pipe(gulp.dest('./assets/css/src'))
         .pipe(notify({message: 'good job guy, css looks sharp!'}));
 });
 

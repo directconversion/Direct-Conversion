@@ -143,7 +143,7 @@ function cone_enqueue_scripts() {
     wp_enqueue_style( 'default-style', get_stylesheet_uri() );
 
     // vendor.css created with gulp
-    wp_enqueue_style( 'main-min-style', get_template_directory_uri() . '/assets/css/main.min.css' );
+    wp_enqueue_style( 'main-min-style', get_template_directory_uri() . '/assets/css/src/main.min.css' );
 
     // vendor.js created with gulp
     wp_enqueue_script( 'main-min-scripts', get_template_directory_uri() . '/assets/js/src/main.min.js', array('jquery'), 1.0, true );
