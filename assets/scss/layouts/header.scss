@@ -1,3 +1,136 @@
 body{
   margin: 0;
+  font-family: $site-font;
+
+}
+
+.header{
+  display: flex;
+  height: 124px;
+  box-shadow: $box-shadow;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 160px);
+  padding: 0 80px;
+  background: white;
+  z-index: 10;
+}
+
+.menu-right{
+  display: flex;
+
+  ul{
+    list-style: none;
+  }
+
+  li{
+    list-style: none;
+    margin-left: 30px;
+  }
+
+  a{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #313131;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.all-content{
+  margin-top: 124px;
+  background: #fafafa;
+}
+
+.hero{
+  background-color: #4a8db1;
+  height: 516px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  //justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content{
+  position: relative;
+  //bottom: 20%;
+  max-width: 800px;
+  left: 80px;
+
+  h1{
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+
+  p{
+    max-width: 600px;
+    font-size: 18px;
+    font-weight: normal;
+    opacity: 0.8;
+    letter-spacing: 0.7px;
+    color: #ffffff;
+  }
+  a{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}
+
+.hero-menu{
+  position: absolute;
+  width: calc(100% - 160px);
+  BOTTOM: 0;
+  height: 53px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  color: white;
+  padding: 0 80px;
+  align-items: center;
+}
+
+.hero-item{
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height:100%;
+  position: relative;
+  justify-content: center;
+  cursor: pointer;
+
+  p{
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+  }
+}
+
+.active-hero-item{
+  &:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+  }
+}
+
+.all-wrapper{
+  padding: 0 80px;
 }

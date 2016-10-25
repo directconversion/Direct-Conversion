@@ -1,0 +1,93 @@
+.about-grid{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 55px 60px 80px;
+}
+
+.about-grid-content{
+  margin:0 25px 25px 0;
+  width: calc(33.3% - 105px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 40px;
+  //height: calc(350px - 80px);
+  background-color: $font-color;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  position: relative;
+
+  &:hover{
+    p{
+      bottom:0;
+    }
+
+    h4{
+    }
+  }
+
+
+  h2{
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 1.3px;
+    margin: 0 0 20px 0;
+
+  }
+
+  h4{
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    position: relative;
+    bottom: 0;
+
+  }
+
+  p{
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.29;
+    color: #ffffff;
+    margin: 0;
+    position: relative;
+    bottom: -100%;
+    transition: all 0.3s ease-in-out ;
+
+  }
+
+  a{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    i{
+      margin-left: 15px;
+    }
+  }
+}
+
+.about-grid-text{
+  position: absolute;
+  width: calc(100% - 80px);
+  left: 40px;
+  bottom: -67%;
+  height: calc(100% - 80px);
+}
+
+.about-grid-contact{
+  align-items: flex-start;
+  justify-content: center;
+}

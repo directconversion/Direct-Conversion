@@ -134,6 +134,9 @@ function cone_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'cone_excerpt_more' );
 
+remove_filter ('acf_the_content', 'wpautop');
+
+
 /**
  * Add all the main scripts and styles here.
  */
