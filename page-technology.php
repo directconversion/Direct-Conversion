@@ -8,16 +8,8 @@
     </div>
 </section>
 <div class="all-wrapper">
-    <section class="news-section">
-        <div class="news-section-left">
-            <?php get_template_part( 'template-parts/news-content', get_post_format() ); ?>
-            <div class="load-news slide-effect">
-                <a href="#">Load more news</a>
-            </div>
-        </div>
-        <div class="news-section-right">
-            <?php dynamic_sidebar('global-sidebar') ; ?>
-        </div>
+    <section class="technology-top">
+        <?php echo get_field('technology-content') ; ?>
     </section>
 </div>
 

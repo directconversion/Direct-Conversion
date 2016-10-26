@@ -13,14 +13,15 @@
     <?php if( have_rows('what-grid') ): ?>
 
     <?php while( have_rows('what-grid') ) : the_row(); 	remove_filter('acf_the_content', 'wpautop'); ?>
-    <div class="about-grid-content" style="background-image: linear-gradient(to bottom, rgba(193, 193, 193, 0.2), #000000), url('<?php echo get_sub_field('what-image') ; ?>')">
+    <div class="about-grid-content slide-effect" style="background-image: linear-gradient(to bottom, rgba(193, 193, 193, 0.1), rgba(0, 0, 0, 0.4)), url('<?php echo get_sub_field('what-image') ; ?>')">
+        <div class="about-grid-overlay"></div>
         <h4><?php echo get_sub_field('what-headline') ; ?></h4>
         <p><?php echo strip_tags(get_sub_field('what-content')) ; ?></p>
     </div>
     <?php endwhile; ?>
 
     <?php endif; ?>
-    <div class="about-grid-content about-grid-contact">
+    <div class="about-grid-content about-grid-contact slide-effect">
         <h2>Special request?</h2>
         <a href="<?php echo home_url('/contact-us')?>">Contact Us <i class="material-icons">trending_flat</i> </a>
     </div>

@@ -1,0 +1,41 @@
+.sidebar-section{
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  color: $font-color;
+  margin: 0 0 40px 0;
+  max-width: 250px;
+
+  h4{
+    opacity: 0.66;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+  }
+  p{
+    margin: 0 0 5px 0;
+  }
+  a{
+    font-size: 12px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    color: #4a90e2;
+    text-decoration: none;
+    margin: 0;
+  }
+  span{
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 2.4;
+    max-width: 195px;
+  }
+  .sidebar-mt{
+    margin-top: 20px ;
+  }
+}
+
+.sidebar-border{
+  width: 100%;
+  height: 1px;
+  background: #eeeeee;
+  margin-bottom: 30px;
+}

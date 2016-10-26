@@ -1,0 +1,21 @@
+.technology-top{
+  background: white;
+  border-left: $wrapper-border;
+  border-right: $wrapper-border;
+  padding: 100px;
+  color: $font-color;
+
+
+  h2{
+    font-size: 32px;
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.71;
+    max-width: 730px;
+  }
+}
