@@ -150,6 +150,12 @@ function cone_enqueue_scripts() {
 
     // vendor.js created with gulp
     wp_enqueue_script( 'main-min-scripts', get_template_directory_uri() . '/assets/js/src/main.min.js', array('jquery'), 1.0, true );
+
+    wp_localize_script(
+        'main-min-scripts', // this needs to match the name of our enqueued script
+        'ajaxObject',      // the name of the object
+        array('ajaxurl' => admin_url('admin-ajax.php')) // the property/value
+    );
 }
 add_action( 'wp_enqueue_scripts', 'cone_enqueue_scripts' );
 
