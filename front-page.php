@@ -9,31 +9,37 @@
         </div>
     </section>
     <div class="all-wrapper">
-        <section class="home-top-section">
+        <section class="home-top-section slide-effect">
             <h2><?php echo get_field('global-header') ; ?></h2>
             <p><?php echo get_field('global-content') ; ?></p>
         </section>
         <section class="home-grid">
             <div class="home-grid-section">
                 <div class="home-grid-content hgc-text">
-                    <?php echo get_field('knowledge-content') ; ?>
+                    <div class="slide-effect">
+                        <?php echo get_field('knowledge-content') ; ?>
+                    </div>
                 </div>
                 <div class="home-grid-content" style="background-image: url(' <?php echo get_field('knowledge-image') ; ?>')">
                 </div>
             </div>
             <div class="home-grid-section">
-                <div class="home-grid-content" style="background-image: url(' <?php echo get_field('partner-image') ; ?>')">
+                <div class="home-grid-content " style="background-image: url(' <?php echo get_field('partner-image') ; ?>')">
                 </div>
-                <div class="home-grid-content hgc-text">
-                    <?php echo get_field('partner-content') ; ?>
+                <div class="home-grid-content  hgc-text">
+                    <div class="slide-effect">
+                        <?php echo get_field('partner-content') ; ?>
+                    </div>
                 </div>
             </div>
             <div class="home-grid-section">
                 <div class="home-grid-content hgc-text">
-                    <?php echo get_field('brand-content') ; ?>
-                    <a href="#"><i class="material-icons">trending_flat</i> Products</a>
+                    <div class="slide-effect">
+                        <?php echo get_field('brand-content') ; ?>
+                        <a href="<?php echo home_url('/products')?>"><i class="material-icons">trending_flat</i> Products</a>
+                    </div>
                 </div>
-                <div class="home-grid-content" style="background-image: url(' <?php echo get_field('brand-image') ; ?>')">
+                <div class="home-grid-content " style="background-image: url(' <?php echo get_field('brand-image') ; ?>')">
                 </div>
             </div>
         </section>
