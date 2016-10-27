@@ -2,9 +2,18 @@
   background: white;
   border-left: $wrapper-border;
   border-right: $wrapper-border;
-  padding: 100px;
+  padding: 80px 100px;
   color: $font-color;
 
+  @include breakpoint(xl) {
+    padding: 40px 60px;
+  }
+  @include breakpoint(medium) {
+    flex-direction: column;
+  }
+  @include breakpoint(small) {
+    padding: 40px 20px;
+  }
 
   h2{
     font-size: 32px;

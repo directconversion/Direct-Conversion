@@ -17,6 +17,13 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<!--    <div class="modal-section">-->
+<!--        <div class="modal">-->
+<!--            <i class="material-icons">close</i>-->
+<!--            <h2>Jean-Philippe Flament</h2>-->
+<!--            <p>Jean-Philippe Flament is Chairman of VisuRay PLC, a substantial shareholder of XCounter. He worked as portfolio manager in Cheyne Capital Management (2003-2009). Mr. Flament has previously served as a Managing Director of Morgan Stanley & Co Intl Ltd (1993-2002) and as Assistant Director of NatWest Financial Products plc (1991-1993). Mr. Flament holds a degree of Bachelor of Science in Finance and International Business from New York University.</p>-->
+<!--        </div>-->
+<!--    </div>-->
     <div class="load-overlay">
         <svg width="261px" height="75px" viewBox="0 0 261 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>

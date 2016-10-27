@@ -1,7 +1,22 @@
+.home-section{
+  border-left: $wrapper-border;
+  border-right: $wrapper-border;
+
+  @include breakpoint(small) {
+    border: none;
+  }
+}
 
 .home-top-section{
   background-color: #fafbff;
   padding: 90px 100px;
+
+  @include breakpoint(desktop) {
+    padding: 40px 60px;
+  }
+  @include breakpoint(small) {
+    padding: 40px 20px;
+  }
 
   h2{
     font-size: 30px;
@@ -16,8 +31,19 @@
   }
 }
 
+.home-grid-section:nth-child(odd){
+  @include breakpoint(laptop) {
+    flex-direction: column-reverse;
+  }
+}
+
+
 .home-grid-section{
   display: flex;
+
+  @include breakpoint(laptop) {
+    flex-direction: column;
+  }
 }
 
 .home-grid-content{
@@ -27,6 +53,14 @@
   background-repeat: no-repeat;
   background-position: center;
   color: $font-color;
+
+  @include breakpoint(laptop) {
+    height: 300px;
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    height: 200px;
+  }
 
 
   h2{
@@ -60,4 +94,18 @@
 .hgc-text{
   width: calc(50% - 200px);
   padding: 60px 100px;
+
+  @include breakpoint(xl) {
+    width: calc(50% - 120px);
+    padding: 60px 60px;
+  }
+  @include breakpoint(laptop) {
+    height: auto;
+    width: calc(100% - 120px);
+  }
+  @include breakpoint(small) {
+    padding: 40px 20px;
+    width: calc(100% - 40px);
+
+  }
 }

@@ -2,6 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   padding: 25px 55px 60px 80px;
+
+  @include breakpoint(desktop) {
+    padding: 25px 15px 60px 40px;
+  }
+  @include breakpoint(small) {
+    padding: 25px 0 25px 20px;
+  }
 }
 
 .people-grid-content{
@@ -11,6 +18,21 @@
   flex-direction: column;
   border: $wrapper-border;
   cursor: pointer;
+
+  @include breakpoint(xl) {
+    width: calc(33.3% - 27px);
+  }
+  @include breakpoint(laptop) {
+    width: calc(50% - 27px);
+  }
+  @include breakpoint(small) {
+    margin:0 20px 25px 0;
+    width: calc(50% - 22px);
+  }
+  @include breakpoint(mobile) {
+    width: calc(100% - 22px);
+  }
+
 
   &:hover{
     .people-grid-overlay{

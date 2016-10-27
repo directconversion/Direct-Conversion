@@ -8,8 +8,10 @@
     </div>
 </section>
 <div class="all-wrapper">
-    <section class="technology-top">
+    <section class="technology-top slide-effect">
+        <div class="slide-effect">
         <?php echo get_field('technology-content') ; ?>
+        </div>
     </section>
 </div>
 

@@ -6,6 +6,10 @@
   margin: 0 0 40px 0;
   max-width: 250px;
 
+  @include breakpoint(medium) {
+    margin: 0 40px 40px 0;
+  }
+
   h4{
     opacity: 0.66;
     text-transform: uppercase;
@@ -31,6 +35,11 @@
   .sidebar-mt{
     margin-top: 20px ;
   }
+}
+
+.textwidget{
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .sidebar-border{

@@ -9,6 +9,7 @@
         </div>
     </section>
     <div class="all-wrapper">
+        <div class="home-section">
         <section class="home-top-section slide-effect">
             <h2><?php echo get_field('global-header') ; ?></h2>
             <p><?php echo get_field('global-content') ; ?></p>
@@ -43,5 +44,6 @@
                 </div>
             </div>
         </section>
+            </div>
     </div>
 <?php get_footer() ; ?>

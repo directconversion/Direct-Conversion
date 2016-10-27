@@ -4,10 +4,33 @@
   border-right: $wrapper-border;
   display: flex;
   padding: 80px 100px;
+
+  @include breakpoint(xl) {
+    padding: 40px 60px;
+  }
+  @include breakpoint(medium) {
+    flex-direction: column;
+  }
+  @include breakpoint(small) {
+    padding: 40px 20px;
+  }
 }
 
 .news-section-left{
   margin-right: 100px;
+
+  @include breakpoint(xl) {
+    margin-right: 60px;
+  }
+  @include breakpoint(medium) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 .news-grid{
@@ -73,5 +96,9 @@
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 20px;
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+    }
   }
 }
