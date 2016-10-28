@@ -385,5 +385,14 @@
         </a>
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu-right' ) ); ?>
+        <i class="material-icons hamburger">menu</i>
+    </div>
+    <div class="mobile-menu">
+        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'mobile-menu-content' ) ); ?>
+        <div class="mobile-menu-info">
+            <a href="#">info@directconversion.com</a>
+            <p>+46 70 55 62 66 44</p>
+
+        </div>
     </div>
     <div class="all-content">

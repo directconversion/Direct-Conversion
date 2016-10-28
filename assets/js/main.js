@@ -1,13 +1,41 @@
 //= include ./src/example/file.js
 
 jQuery(document).ready( function($) {
+    $('body').scrollTop(0);
+
 
     $(window).load(function () {
         $('.load-overlay').fadeOut('slow');
     });
 
+    $('.hamburger').on('click', function(){
 
-    var lastScrollTop = $(window).scrollTop();
+        closeOpen($(this));
+
+    });
+
+    function closeOpen (a) {
+
+
+        if (a.hasClass('is-active')) {
+            $(".mobile-menu").fadeOut('fast');
+            a.removeClass('is-active');
+        }
+        else {
+            a.addClass('is-active');
+            $(".mobile-menu").fadeIn('fast');
+
+        }
+        //(function fadeNext(collection){
+        //    collection.eq(0).fadeIn(100,  function(){
+        //        (collection=collection.slice(1)).length
+        //        && fadeNext(collection)
+        //    });
+        //})($('.mobile-menu-content li'))
+    }
+
+
+        var lastScrollTop = $(window).scrollTop();
 
     $(window).scroll(function(){
         var scrollAmt = $(this).scrollTop();
@@ -22,6 +50,9 @@ jQuery(document).ready( function($) {
     $(window).on('resize', function (){
         var hw = $('.people-grid-image').width();
         $('.people-grid-image').css({'height':hw+'px'});
+
+        var hw = $('.product-grid-content').width();
+        $('.product-grid-content').css({'height':hw+'px'});
     });
 
     //Set height and width of people images
@@ -30,6 +61,11 @@ jQuery(document).ready( function($) {
 
     var hw = $('.people-grid-image').width();
     $('.people-grid-image').css({'height':hw+'px'});
+
+    var hw = $('.product-grid-content').width();
+    $('.product-grid-content').css({'height':hw+'px'});
+
+
 
     //Hide non-active people on pageload
     $('.people-grid-content').each(function () {
@@ -129,5 +165,6 @@ function modalHTML(name,text){
     return html;
 
 }
+
 
 

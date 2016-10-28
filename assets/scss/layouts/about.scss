@@ -110,7 +110,16 @@
 
     i{
       margin-left: 15px;
+      transition: 0.3s ease-in-out;
     }
+  }
+
+  .about-grid-link{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
   }
 }
 
@@ -134,4 +143,10 @@
 .about-grid-contact{
   align-items: flex-start;
   justify-content: center;
+
+  &:hover{
+    i{
+      margin-left: 25px;
+    }
+  }
 }

@@ -36,10 +36,37 @@ html, html a {
   padding: 0 80px;
   background: white;
   z-index: 10;
+
+  @include breakpoint(xl) {
+    height: 80px;
+
+    svg{
+      width: 200px;
+    }
+  }
+  @include breakpoint(desktop) {
+    padding: 0 40px;
+    width: calc(100% - 80px);
+
+  }
+  @include breakpoint(small) {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+    svg{
+      width: 150px;
+    }
+  }
+}
+.header-logo{
+  max-width: 100px;
 }
 
 .menu-right{
   display: flex;
+
+  @include breakpoint(xl) {
+    display: none;
+  }
 
   ul{
     list-style: none;
@@ -63,6 +90,10 @@ html, html a {
 .all-content{
   margin-top: 124px;
   background: #fafafa;
+
+  @include breakpoint(xl) {
+    margin-top: 80px;
+  }
 }
 
 .hero{
@@ -146,13 +177,26 @@ html, html a {
 
 .hero-menu{
   position: absolute;
-  width: 100%;
+  width: calc(100% - 160px);
+  left: 0;
+  padding: 0 80px;
   bottom: 0;
   height: 53px;
   background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   color: white;
   align-items: center;
+
+
+  @include breakpoint(desktop) {
+    width: calc(100% - 80px);
+    padding: 0 40px;
+
+  }
+  @include breakpoint(small) {
+    padding: 0 20px;
+    width: calc(100% - 40px);
+  }
 }
 
 .hero-item{
@@ -257,5 +301,132 @@ html, html a {
     &:hover{
       opacity: 0.7;
     }
+  }
+}
+
+.hamburger{
+  display: none;
+
+  @include breakpoint(xl) {
+    display: block;
+  }
+}
+
+.mobile-menu{
+  display: none;
+  height: 100%;
+  width: calc(100% - 160px);
+  position: fixed;
+  z-index: 20;
+  background: #363b4a;
+  padding: 20px 80px;
+
+  @include breakpoint(desktop) {
+    padding: 20px 40px;
+    width: calc(100% - 80px);
+
+  }
+  @include breakpoint(small) {
+    padding: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .current-menu-item  a{
+    opacity: 0.41;
+  }
+
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+  }
+
+  li:nth-child(1){
+    animation-delay: .1s
+  }
+
+  li:nth-child(2){
+    animation-delay: .2s
+  }
+
+  li:nth-child(3){
+    animation-delay: .3s
+  }
+  li:nth-child(4){
+    animation-delay: .4s
+  }
+  li:nth-child(5){
+    animation-delay: .5s
+  }
+  li:nth-child(6){
+    animation-delay: .6s
+  }
+  li:nth-child(7){
+    animation-delay: .7s
+  }
+  li:nth-child(8){
+    animation-delay: .8s
+  }
+
+  li{
+    margin-top: 30px;
+    animation: FadeIn .8s;
+    animation-fill-mode:both;
+
+    a{
+      width: 100%;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 300;
+      font-style: normal;
+      font-stretch: normal;
+      color: #ffffff;
+      transition: 0.3s ease-in-out;
+
+      &:hover{
+        opacity: 0.41;
+      }
+    }
+  }
+
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 60px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 30px;
+  }
+}
+
+.mobile-menu-info{
+  position: absolute;
+  bottom: 150px;
+  left: 20px;
+
+  a{
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  p{
+    font-size: 10px;
+    font-weight: normal;
+    color: #ffffff;
+  }
+}
+
+.hamburger{
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: $font-color;
+
+  &:hover{
+    opacity: 0.7;
   }
 }

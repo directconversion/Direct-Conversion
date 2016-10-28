@@ -22,6 +22,7 @@
 
     <?php endif; ?>
     <div class="about-grid-content about-grid-contact slide-effect">
+        <a class="about-grid-link" href="<?php echo home_url('/contact-us')?>"></a>
         <h2>Special request?</h2>
         <a href="<?php echo home_url('/contact-us')?>">Contact Us <i class="material-icons">trending_flat</i> </a>
     </div>
