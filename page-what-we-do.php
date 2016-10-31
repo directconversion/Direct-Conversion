@@ -15,8 +15,10 @@
     <?php while( have_rows('what-grid') ) : the_row(); 	remove_filter('acf_the_content', 'wpautop'); ?>
     <div class="about-grid-content slide-effect" style="background-image: linear-gradient(to bottom, rgba(193, 193, 193, 0.1), rgba(0, 0, 0, 0.4)), url('<?php echo get_sub_field('what-image') ; ?>')">
         <div class="about-grid-overlay"></div>
+        <div class="about-grid-info">
         <h4><?php echo get_sub_field('what-headline') ; ?></h4>
         <p><?php echo strip_tags(get_sub_field('what-content')) ; ?></p>
+            </div>
     </div>
     <?php endwhile; ?>
 

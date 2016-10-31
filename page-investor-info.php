@@ -24,6 +24,7 @@
                 </div>
             </div>
             <div class="news-section-right">
+                <?php dynamic_sidebar('reports') ; ?>
                 <?php dynamic_sidebar('investor-info') ; ?>
                 <?php dynamic_sidebar('global-sidebar') ; ?>
             </div>

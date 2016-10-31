@@ -53,13 +53,22 @@ $menu = array();
         <div class="product-info">
             <div class="news-section-left">
                 <div class="investor-section slide-effect">
-                    <h1>The Ajat product line</h1>
-                    <p>Over the past 20 years the X-ray imaging industry has undergone significant changes in the move to digital imaging. Our charge integrating AJAT sensor has been at the forefront of this change in being able to provide the market with leading sensitivity to photon radiation, high image resolution and sharpness even at low radiation dose. This long term development has resulted in established relationships with suppliers and partners across the world and built an expertise within the AJAT product team that specializes in: – Design and development of CdTe-CMOS, CdZnTe-CMOS, Si-CMOS radiation imaging sensors; – Single crystal interconnection to ASICs; – Electronic hardware and firmware with full custom ASIC design; – Image reconstruction, data processing and application software, Ajat products are now the leading direct conversion X-ray imaging detector in the Dental field</p>
+                    <?php if( have_rows('product-info') ): ?>
+                        <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
+                            <?php echo get_sub_field('product-info-content') ; ?>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                     <a href="#">more information</a>
                 </div>
             </div>
             <div class="news-section-right">
                 <?php dynamic_sidebar('global-sidebar') ; ?>
+            </div>
+        </div>
+        <div class="product-button">
+            <div>
+                <a href="http://xcounter.com/products/" target="_blank"></a>
+                <p>XCounter product line <i class="material-icons">arrow_forward</i></p>
             </div>
         </div>
     </section>

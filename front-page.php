@@ -37,7 +37,7 @@
                 <div class="home-grid-content hgc-text">
                     <div class="slide-effect">
                         <?php echo get_field('brand-content') ; ?>
-                        <a href="<?php echo home_url('/products')?>"><i class="material-icons">trending_flat</i> Products</a>
+                        <a href="<?php echo home_url('/products')?>">Products <i class="material-icons">trending_flat</i></a>
                     </div>
                 </div>
                 <div class="home-grid-content " style="background-image: url(' <?php echo get_field('brand-image') ; ?>')">

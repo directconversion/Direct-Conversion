@@ -57,7 +57,7 @@ jQuery(document).ready( function($) {
 
     //Set height and width of people images
     var cw = $('.about-grid-content').width();
-    $('.about-grid-content').css({'min-height':cw+'px'});
+    $('.about-grid-content').css({'height':cw+'px'});
 
     var hw = $('.people-grid-image').width();
     $('.people-grid-image').css({'height':hw+'px'});

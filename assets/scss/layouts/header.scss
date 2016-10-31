@@ -277,6 +277,16 @@ html, html a {
   color: $font-color;
   position: relative;
 
+  @include breakpoint(medium) {
+    width: calc(100% - 120px);
+    padding: 40px;
+  }
+
+  @include breakpoint(mobile) {
+    height: calc(100% - 80px);
+    width: calc(100% - 40px);
+    padding: 40px 20px;
+  }
 
   h2{
     font-size: 22px;
@@ -389,7 +399,10 @@ html, html a {
       }
     }
   }
-
+  .menu-primary-menu-container{
+      height: calc(100% - 200px);
+      overflow: scroll;
+  }
 }
 @keyframes FadeIn {
   0% {
@@ -405,7 +418,15 @@ html, html a {
 .mobile-menu-info{
   position: absolute;
   bottom: 150px;
-  left: 20px;
+  left: 80px;
+
+   @include breakpoint(desktop) {
+    left: 40px;
+  }
+
+   @include breakpoint(small) {
+    left: 20px;
+  }
 
   a{
     font-size: 12px;

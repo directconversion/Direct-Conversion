@@ -5,9 +5,10 @@
   color: $font-color;
   margin: 0 0 40px 0;
   max-width: 250px;
+  width: 100%;
 
   @include breakpoint(medium) {
-    margin: 0 40px 40px 0;
+    max-width: 100%;
   }
 
   h4{
@@ -47,4 +48,52 @@
   height: 1px;
   background: #eeeeee;
   margin-bottom: 30px;
+  max-width: 250px;
+
+  @include breakpoint(medium) {
+    max-width: 100%;
+  }
+}
+.annual-content{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eeeeee;
+  padding: 10px 0;
+  position: relative;
+
+  p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #4a4a4a;
+    margin: 0;
+  }
+
+  i{
+    font-size: 20px;
+    color: #297fb7;
+  }
+
+  a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  span{
+    opacity: 0.6;
+    font-size: 12px;
+    font-weight: normal;
+    color: #4a4a4a;
+    display: flex;
+    align-items: center;
+
+    i{
+      opacity: 0.6;
+      font-size: 12px;
+      color: #4a4a4a;
+      margin-right: 5px;
+    }
+  }
 }

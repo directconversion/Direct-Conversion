@@ -8,6 +8,17 @@
   letter-spacing: 0.6px;
   justify-content: space-between;
 
+  @include breakpoint(xl) {
+    padding: 15px 60px 80px 60px; 
+  }
+
+  @include breakpoint(desktop) {
+    flex-direction: column;
+  }
+   @include breakpoint(small) {
+    padding: 15px 20px 80px 20px; 
+  }
+
   h2{
     font-size: 22px;
     font-weight: normal;
@@ -21,11 +32,39 @@
   }
 }
 
+.contact-section-left{
+  margin-right: 15px;
+}
+
 .contact-section-right{
   padding-top: 25px;
+}
+
+.contact-content{
+
+  @include breakpoint(desktop) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div{
+      margin-right: 20px;
+
+      @include breakpoint(mobile) {
+        margin-right: 0;
+      }
+    }
+  }
 }
 
 #map{
   width: 550px;
   height: 400px;
+
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
+  @include breakpoint(mobile) {
+    height: 300px;  
+  }
 }
