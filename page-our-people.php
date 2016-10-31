@@ -14,10 +14,21 @@ $menu = array();
                 <?php while( have_rows('our-people') ) : the_row();
                     $currentRow = get_sub_field('people-type');
 
-                    if( !in_array($currentRow, $menu) ) {
-                        array_push($menu, $currentRow);
+                    if (strpos($currentRow, ';') !== false) {
+                        $multipleBranch = explode(';',$currentRow);
+                        foreach ($multipleBranch as $branch){
+                            if( !in_array($branch, $menu) ) {
+                                array_push($menu, $branch);
+                            }else{
+                                continue;
+                            }
+                        }
                     }else{
-                        continue;
+                        if( !in_array($currentRow, $menu) ) {
+                            array_push($menu, $currentRow);
+                        }else{
+                            continue;
+                        }
                     }
                 endwhile;
 
@@ -37,8 +48,18 @@ $menu = array();
         <?php if( have_rows('our-people') ): ?>
             <?php while( have_rows('our-people') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
                 <?php $peopleTypeClass =  preg_replace('/\s+/', '', get_sub_field('people-type')); ?>
-                <?php $firstMenuItem =  preg_replace('/\s+/', '', $menu[0]); ?>
-                <div class="people-grid-content <?php echo $peopleTypeClass; ?>">
+                <?php $firstMenuItem =  preg_replace('/\s+/', '', $menu[0]);
+
+                if (strpos($peopleTypeClass, ';') !== false) {
+                    $multipleBranch = explode(';',$peopleTypeClass);
+                    $peopleTypeClass = '';
+                    foreach ($multipleBranch as $branch){
+                        $peopleTypeClass .= $branch;
+                        $peopleTypeClass .= ' ';
+                    }
+                }
+                ?>
+                <div class="people-grid-content js-cone-grid-content <?php echo $peopleTypeClass; ?>">
                     <input type="hidden" class="hidden-biography" value="<?php the_sub_field( 'people-biography' )?>">
                     <div class="people-grid-image" style="background-image: url('<?php echo get_sub_field('people-image') ; ?>')">
                         <div class="people-grid-overlay">

@@ -14,6 +14,39 @@ jQuery(document).ready( function($) {
 
     });
 
+    var item = $('.active-hero-item').data('value');
+    var long = $('#'+item).data('long');
+    var lat = $('#'+item).data('lat');
+    var map, marker;
+
+    //console.log(lat);
+    window.initMap = function() {
+        var mapDiv = document.getElementById('map');
+        var company =  {lat: parseInt(lat), lng: parseInt(long)};
+        map = new google.maps.Map(mapDiv, {
+            center: company,
+            zoom: 16,
+            scrollwheel: false
+
+
+        });
+        marker = new google.maps.Marker({
+            position: company,
+            map: map,
+            title: $('.active-hero-item p').text()
+        });
+    }
+
+
+    //Change map location
+    $('.contact-hero-item').on('click', function() {
+        var coordinates = $(this).data('value');
+        var panPoint = new google.maps.LatLng($('#'+coordinates).data('lat'), $('#'+coordinates).data('long'));
+        map.panTo(panPoint);
+        marker.setPosition(panPoint);
+        marker.setTitle( $(this).find('p').text() );
+    });
+
     function closeOpen (a) {
 
 
@@ -66,9 +99,8 @@ jQuery(document).ready( function($) {
     $('.product-grid-content').css({'height':hw+'px'});
 
 
-
     //Hide non-active people on pageload
-    $('.people-grid-content').each(function () {
+    $('.js-cone-grid-content').each(function () {
         var activeItem = $('.active-hero-item').data('value');
         if ( $(this).hasClass(activeItem) ) {
             $(this).fadeIn('slow');
@@ -82,7 +114,7 @@ jQuery(document).ready( function($) {
         var activeItem = $(this).data('value');
         $('.hero-item').removeClass('active-hero-item');
         $(this).addClass('active-hero-item');
-        $('.people-grid-content').each(function () {
+        $('.js-cone-grid-content').each(function () {
             if ( $(this).hasClass(activeItem) ) {
                 $(this).fadeIn('slow');
             }else{
@@ -93,7 +125,6 @@ jQuery(document).ready( function($) {
 
     // Open biography-modal
     $('body').on('click', '.people-grid-content', function () {
-        event.stopPropagation();
         var name = $(this).find('.people-grid-text h4').text();
         var text = $(this).find('.hidden-biography').val();
         $('body').prepend( modalHTML(name,text) );
@@ -106,7 +137,7 @@ jQuery(document).ready( function($) {
 
     //Close modal on click outside
     $('body').on('click', '.modal-section', function () {
-        if (event.target.className != 'modal') $('.modal-section').remove();
+        if (!$(event.target).closest(".modal").length) $('.modal-section').remove();
     });
 
     (function($) {
@@ -165,6 +196,3 @@ function modalHTML(name,text){
     return html;
 
 }
-
-
-
