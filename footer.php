@@ -43,7 +43,6 @@
             <p>Praesent nonummy mi in odio. Aliquam erat volutpat. Morbi mattis ullamcorper velit. Nam adipiscing. Curabitur ligula sapien, tincidunt non, uismod vitae, lorem ipsum dip wal posuere read more.</p>
         </div>
     </section>
-
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXWF-zTaNyT5bR64le1M2Xrp7P6_8Shtw&callback=initMap" type="text/javascript"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXWF-zTaNyT5bR64le1M2Xrp7P6_8Shtw&callback=initMap" type="text/javascript"></script>
 </body>
 </html>
