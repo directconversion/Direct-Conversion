@@ -52,14 +52,17 @@ $menu = array();
         </div>
         <div class="product-info">
             <div class="news-section-left">
-                <div class="investor-section slide-effect">
-                    <?php if( have_rows('product-info') ): ?>
-                        <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
-                            <?php echo get_sub_field('product-info-content') ; ?>
-                        <?php endwhile; ?>
-                    <?php endif; ?>
-                    <a href="#">more information</a>
-                </div>
+                <?php if( have_rows('product-info') ): ?>
+                    <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
+                        <?php $productBranchClass =  preg_replace('/\s+/', '', get_sub_field('product-info-branch')); ?>
+                        <div class="investor-section slide-effect js-cone-grid-content <?php echo $productBranchClass; ?>">
+
+                        <?php echo get_sub_field('product-info-content') ; ?>
+
+                        <a href="#">more information</a>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
             <div class="news-section-right">
                 <?php dynamic_sidebar('global-sidebar') ; ?>
