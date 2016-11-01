@@ -25,7 +25,7 @@ $menu = array();
         ?>
 
         <?php foreach ($menu as $key => $item) : ?>
-            <div data-value="<?php echo preg_replace('/\s+/', '', $item); ?>" class="hero-item contact-hero-item <?php if ( $key == 0 ) echo 'active-hero-item'; ?>">
+            <div data-value="<?php echo preg_replace(['/\(|\)/', '/\s+/', '/\.$/', '@[/\\\]@'], ['', '', '', ''], $item); ?>" class="hero-item contact-hero-item <?php if ( $key == 0 ) echo 'active-hero-item'; ?>">
                 <p><?php echo $item ?></p>
             </div>
         <?php endforeach; ?>
@@ -37,7 +37,7 @@ $menu = array();
         <div class="contact-section-left">
             <?php if( have_rows('contact') ): ?>
                 <?php while( have_rows('contact') ) : the_row();  ?>
-                    <?php $peopleTypeClass =  preg_replace('/\s+/', '', get_sub_field('contact-company')); ?>
+                    <?php $peopleTypeClass =  preg_replace(['/\(|\)/', '/\s+/', '/\.$/', '@[/\\\]@'], ['', '', '', ''], get_sub_field('contact-company')); ?>
                     <?php $firstMenuItem =  preg_replace('/\s+/', '', $menu[0]); ?>
                     <div  id="<?php echo $peopleTypeClass; ?>" data-long="<?php the_sub_field('lng'); ?>" data-lat="<?php the_sub_field('lat'); ?>" class="contact-content slide-effect js-cone-grid-content <?php echo $peopleTypeClass . ' active-map'; ?>">
                         <?php echo get_sub_field('contact-content') ; ?>
