@@ -40,8 +40,10 @@ jQuery(document).ready( function($) {
 
     //Change map location
     $('.contact-hero-item').on('click', function() {
-        var coordinates = $(this).data('value');
-        var panPoint = new google.maps.LatLng($('#'+coordinates).data('lat'), $('#'+coordinates).data('long'));
+        var coordinates = String( $(this).data('value') );
+        var id = coordinates.replace(/[\., () ,:-]+/g, "");
+        //console.log(coordinates.replace(/[\., () ,:-]+/g, ""));
+        var panPoint = new google.maps.LatLng($('#'+id).data('lat'), $('#'+id).data('long'));
         map.panTo(panPoint);
         marker.setPosition(panPoint);
         marker.setTitle( $(this).find('p').text() );
