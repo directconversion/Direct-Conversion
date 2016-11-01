@@ -182,7 +182,7 @@ html, html a {
   padding: 0 80px;
   bottom: 0;
   height: 53px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   color: white;
   align-items: center;
@@ -223,6 +223,7 @@ html, html a {
     width: 100%;
     height: 3px;
     background: white;
+    left: 0;
   }
 }
 
@@ -237,6 +238,10 @@ html, html a {
   }
 }
 
+.slide-effect{
+  opacity: 0;
+}
+
 .come-in {
   transform: translateY(150px);
   animation: come-in 0.8s ease forwards;
@@ -246,12 +251,15 @@ html, html a {
 }
 
 @keyframes come-in {
-  to { transform: translateY(0); }
+  to { transform: translateY(0);
+      opacity: 1;
+  }
 }
 
 .already-visible {
   transform: translateY(0);
   animation: none;
+  opacity: 1;
 }
 
 
