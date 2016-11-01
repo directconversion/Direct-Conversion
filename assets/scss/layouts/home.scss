@@ -100,11 +100,11 @@
 
 .hgc-text{
   width: calc(50% - 200px);
-  padding: 60px 100px;
+  padding: 100px;
 
   @include breakpoint(xl) {
     width: calc(50% - 120px);
-    padding: 60px 60px;
+    padding: 60px;
   }
   @include breakpoint(laptop) {
     height: auto;
