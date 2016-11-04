@@ -65,14 +65,26 @@ $menu = array();
                 <?php endif; ?>
             </div>
             <div class="news-section-right">
-                <?php dynamic_sidebar('global-sidebar') ; ?>
+                <?php if( have_rows('product-info') ): ?>
+                    <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
+                        <?php $productBranchClass =  preg_replace('/\s+/', '', get_sub_field('product-info-branch')); ?>
+                        <div class="<?php echo $productBranchClass; ?> js-cone-grid-content">
+                            <?php dynamic_sidebar(get_sub_field('product-info-branch')) ; ?>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
             </div>
         </div>
         <div class="product-button">
-            <div>
-                <a href="http://xcounter.com/products/" target="_blank"></a>
-                <p>XCounter product line <i class="material-icons">arrow_forward</i></p>
-            </div>
+            <?php if( have_rows('product-info') ): ?>
+                <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
+                    <?php $productBranchClass =  preg_replace('/\s+/', '', get_sub_field('product-info-branch')); ?>
+                    <div style="display: none" class="<?php echo $productBranchClass; ?> js-cone-grid-content">
+                        <p><?php the_sub_field('product-info-branch') ?><i class="material-icons">arrow_forward</i></p>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
+
         </div>
     </section>
 </div>

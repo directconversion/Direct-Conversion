@@ -121,14 +121,8 @@
   display: flex;
   margin-top: 30px;
 
-  @include breakpoint(xl) {
-    padding: 40px 60px;
-  }
   @include breakpoint(medium) {
     flex-direction: column;
-  }
-  @include breakpoint(small) {
-    padding: 40px 20px;
   }
 }
 
