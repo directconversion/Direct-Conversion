@@ -14,6 +14,50 @@ jQuery(document).ready( function($) {
 
     });
 
+    // Hide Header on on scroll down
+    var didScroll;
+    var lastST = 0;
+    var delta = 5;
+    var navbarHeight = $('header').outerHeight();
+
+    $(window).scroll(function(event){
+        didScroll = true;
+    });
+
+    setInterval(function() {
+        if (didScroll) {
+            hasScrolled();
+            didScroll = false;
+        }
+    }, 250);
+
+    function hasScrolled() {
+        var st = $(this).scrollTop();
+        // Make sure they scroll more than delta
+        if(Math.abs(lastST - st) <= delta){
+            console.log(lastST);
+            console.log(st);
+
+            return;
+        }
+
+        // If they scrolled down and are past the navbar, add class .nav-up.
+        // This is necessary so you never see what is "behind" the navbar.
+        if (st > lastST && st > navbarHeight){
+            console.log('Upp med header');
+            // Scroll Down
+            $('header').removeClass('nav-down').addClass('nav-up');
+        } else {
+            // Scroll Up
+            console.log('ner med header');
+            if(st + $(window).height() < $(document).height()) {
+                $('header').removeClass('nav-up').addClass('nav-down');
+            }
+        }
+
+        lastST = st;
+    }
+
     var item = $('.active-hero-item').data('value');
     var long = $('#'+item).data('long');
     var lat = $('#'+item).data('lat');
@@ -74,7 +118,7 @@ jQuery(document).ready( function($) {
     }
 
 
-        var lastScrollTop = $(window).scrollTop();
+    var lastScrollTop = $(window).scrollTop();
 
     $(window).scroll(function(){
         var scrollAmt = $(this).scrollTop();
@@ -140,6 +184,9 @@ jQuery(document).ready( function($) {
     $('body').on('click', '.modal i', function () {
         $('.modal-section').remove();
     });
+    $('body').keyup(function(e) {
+        if (e.keyCode === 27) $('.modal-section').remove();   // esc
+    });
 
     //Close modal on click outside
     $('body').on('click', '.modal-section', function () {
@@ -202,3 +249,4 @@ function modalHTML(name,text){
     return html;
 
 }
+

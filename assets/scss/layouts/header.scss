@@ -23,7 +23,11 @@ html, html a {
   justify-content: center;
 }
 
-.header{
+.nav-up {
+  top: -124px !important;
+}
+
+header{
   display: flex;
   height: 124px;
   box-shadow: $box-shadow;
@@ -36,6 +40,8 @@ html, html a {
   padding: 0 80px;
   background: white;
   z-index: 10;
+  transition: top 0.3s ease-in-out;
+
 
   @include breakpoint(xl) {
     height: 80px;
@@ -243,8 +249,8 @@ html, html a {
 }
 
 .come-in {
-  transform: translateY(150px);
-  animation: come-in 0.8s ease forwards;
+  transform: translateY(80px);
+  animation: come-in 1s ease forwards;
 }
 .come-in:nth-child(odd) {
   animation-duration: 0.6s; /* So they look staggered */

@@ -120,9 +120,10 @@
   height: 100%;
   position: relative;
   bottom: -92% ;
-  transition: 0.3s ease-in-out;
+  transition: 0.6s;
   display: flex;
   flex-direction: column;
+  transition-timing-function: cubic-bezier(0,0,0.28,1);
 
   @include breakpoint(medium) {
     bottom: 0;
@@ -138,7 +139,7 @@
   left: 0;
   top: 0;
   opacity: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.6s;
 
   @include breakpoint(small) {
     opacity: 1;
