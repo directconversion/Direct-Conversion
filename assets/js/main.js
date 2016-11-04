@@ -22,7 +22,7 @@ jQuery(document).ready( function($) {
     //console.log(lat);
     window.initMap = function() {
         var mapDiv = document.getElementById('map');
-        var company =  {lat: parseInt(lat), lng: parseInt(long)};
+        var company =  {lat: parseFloat(lat), lng: parseFloat(long)};
         map = new google.maps.Map(mapDiv, {
             center: company,
             zoom: 16,
@@ -36,6 +36,10 @@ jQuery(document).ready( function($) {
             title: $('.active-hero-item p').text()
         });
     }
+
+    console.log('lat: ' + lat + ' - long: ' + long);
+    console.log('Hejj');
+
 
 
     //Change map location
