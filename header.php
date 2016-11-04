@@ -203,7 +203,7 @@
             </g>
         </svg>
     </div>
-    <div class="header">
+    <header class="header nav-down">
         <a href="<?php echo home_url(); ?>" class="header-logo" title="Direct Conversion">
             <svg width="261px" height="75px" viewBox="0 0 261 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                 <defs>
@@ -386,7 +386,7 @@
 
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'menu-right' ) ); ?>
         <i class="material-icons hamburger">menu</i>
-    </div>
+    </header>
     <div class="mobile-menu">
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'mobile-menu-content' ) ); ?>
         <div class="mobile-menu-info">

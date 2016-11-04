@@ -38,9 +38,14 @@
             <span>ISO 9001:2008</span>
         </div>
         <div class="footer-sections">
+            <?php $args = array( 'numberposts' => '1' ); ?>
+            <?php $recent_posts = wp_get_recent_posts( $args ); ?>
             <h4>Latest news</h4>
-            <h3>Latest Developments with XC-DR450 in XCounter product line</h3>
-            <p>Praesent nonummy mi in odio. Aliquam erat volutpat. Morbi mattis ullamcorper velit. Nam adipiscing. Curabitur ligula sapien, tincidunt non, uismod vitae, lorem ipsum dip wal posuere read more.</p>
+           <?php  foreach( $recent_posts as $recent ) : ?>
+               <h3><?php echo  $recent["post_title"] ?></h3>
+               <p><?php echo  wp_trim_excerpt( $recent['post_content']) ?></p>
+           <?php endforeach; wp_reset_query(); ?>
+
         </div>
     </section>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXWF-zTaNyT5bR64le1M2Xrp7P6_8Shtw&callback=initMap" type="text/javascript"></script>

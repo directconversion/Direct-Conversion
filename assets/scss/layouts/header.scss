@@ -23,7 +23,11 @@ html, html a {
   justify-content: center;
 }
 
-.header{
+.nav-up {
+  top: -124px !important;
+}
+
+header{
   display: flex;
   height: 124px;
   box-shadow: $box-shadow;
@@ -36,6 +40,8 @@ html, html a {
   padding: 0 80px;
   background: white;
   z-index: 10;
+  transition: top 0.3s ease-in-out;
+
 
   @include breakpoint(xl) {
     height: 80px;

@@ -11,7 +11,7 @@
     <section class="news-section">
         <div class="news-section-left">
             <?php get_template_part( 'template-parts/news-content', get_post_format() ); ?>
-            <div class="load-news slide-effect">
+            <div class="load-news">
                 <a href="#">Load more news</a>
             </div>
         </div>

@@ -13,7 +13,7 @@
 <?php if ( $loop->have_posts() ) : ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
         <div class="news-grid slide-effect">
-            <a href="<?php echo get_permalink(); ?>"></a>
+            <a target="_blank" href="<?php echo get_field('pdf') ?>"></a>
             <div class="news-date">
                 <span><?php echo get_the_date() ; ?></span>
                 <div class="news-date-border"></div>
