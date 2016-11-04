@@ -5,7 +5,7 @@
         <div class="hero-content">
             <h1><?php echo get_field('hero-title') ; ?> </h1>
             <p><?php echo get_field('hero-text') ; ?> </p>
-            <a href="#">See how</a>
+            <a href="<?php echo home_url('/what-we-do')?>">See how</a>
         </div>
     </section>
     <div class="all-wrapper">
