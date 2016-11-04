@@ -81,11 +81,6 @@ jQuery(document).ready( function($) {
         });
     }
 
-    console.log('lat: ' + lat + ' - long: ' + long);
-    console.log('Hejj');
-
-
-
     //Change map location
     $('.contact-hero-item').on('click', function() {
         var coordinates = String( $(this).data('value') );
@@ -171,6 +166,10 @@ jQuery(document).ready( function($) {
                 $(this).hide();
             }
         });
+    });
+
+    $('body').on('click', '.change-productline',function () {
+        $('.active-hero-item').siblings('.hero-item').trigger('click');        
     });
 
     // Open biography-modal
