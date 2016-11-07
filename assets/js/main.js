@@ -44,12 +44,10 @@ jQuery(document).ready( function($) {
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastST && st > navbarHeight){
-            console.log('Upp med header');
             // Scroll Down
             $('header').removeClass('nav-down').addClass('nav-up');
         } else {
             // Scroll Up
-            console.log('ner med header');
             if(st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
             }
@@ -148,9 +146,16 @@ jQuery(document).ready( function($) {
     $('.js-cone-grid-content').each(function () {
         var activeItem = $('.active-hero-item').data('value');
         if ( $(this).hasClass(activeItem) ) {
-            $(this).fadeIn('slow');
+            //$(this).fadeIn('slow');
+            $(this).css('visibility', '');
+                $(this).attr('style', '');
         }else{
-            $(this).hide();
+            //$(this).hide();
+            $(this).css({
+                'position': 'absolute',
+                'visibility': 'hidden',
+                'display': 'block'
+            });
         }
     });
 
@@ -161,9 +166,15 @@ jQuery(document).ready( function($) {
         $(this).addClass('active-hero-item');
         $('.js-cone-grid-content').each(function () {
             if ( $(this).hasClass(activeItem) ) {
-                $(this).fadeIn('slow');
+                //$(this).fadeIn('slow');
+                $(this).attr('style', '');
             }else{
-                $(this).hide();
+                //$(this).hide();
+                $(this).css({
+                    'position': 'absolute',
+                    'visibility': 'hidden',
+                    'display': 'block'
+                });
             }
         });
     });
