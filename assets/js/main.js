@@ -164,9 +164,16 @@ jQuery(document).ready( function($) {
     $('.js-cone-grid-content').each(function () {
         var activeItem = $('.active-hero-item').data('value');
         if ( $(this).hasClass(activeItem) ) {
-            $(this).fadeIn('slow');
+            //$(this).fadeIn('slow');
+            $(this).css('visibility', '');
+                $(this).attr('style', '');
         }else{
-            $(this).hide();
+            //$(this).hide();
+            $(this).css({
+                'position': 'absolute',
+                'visibility': 'hidden',
+                'display': 'block'
+            });
         }
     });
 
@@ -177,9 +184,15 @@ jQuery(document).ready( function($) {
         $(this).addClass('active-hero-item');
         $('.js-cone-grid-content').each(function () {
             if ( $(this).hasClass(activeItem) ) {
-                $(this).fadeIn('slow');
+                //$(this).fadeIn('slow');
+                $(this).attr('style', '');
             }else{
-                $(this).hide();
+                //$(this).hide();
+                $(this).css({
+                    'position': 'absolute',
+                    'visibility': 'hidden',
+                    'display': 'block'
+                });
             }
         });
     });

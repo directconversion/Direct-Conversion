@@ -11,11 +11,12 @@
     <section class="news-section">
         <div class="news-section-left">
             <?php get_template_part( 'template-parts/news-content', get_post_format() ); ?>
-            <div class="load-news">
+<!--             <div class="load-news">
                 <a href="#">Load more news</a>
-            </div>
+            </div> -->
+
         </div>
-        <div class="news-section-right">
+       <div class="news-section-right">
             <?php dynamic_sidebar('global-sidebar') ; ?>
         </div>
     </section>
