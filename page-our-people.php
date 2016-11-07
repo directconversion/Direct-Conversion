@@ -61,7 +61,7 @@ $menu = array();
                 ?>
                 <div class="people-grid-content js-cone-grid-content <?php echo $peopleTypeClass; ?>">
                     <input type="hidden" class="hidden-biography" value="<?php the_sub_field( 'people-biography' )?>">
-                    <div class="people-grid-image" style="background-image: url('<?php echo get_sub_field('people-image') ; ?>')">
+                    <div class="people-grid-image" style="background-image: url(<?php echo get_sub_field('people-image') ; ?>)">
                         <div class="people-grid-overlay">
                             <p>Biography</p>
                         </div>

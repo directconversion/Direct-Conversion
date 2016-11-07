@@ -145,9 +145,11 @@ header{
     padding: 0 100px;
   }
   @include breakpoint(small) {
-    height: 300px;
     padding: 0 20px;
     width: calc(100% - 40px);
+  }
+  @include breakpoint(mobile) {
+    height: 150px;
   }
 }
 
@@ -161,6 +163,11 @@ header{
     letter-spacing: 1.3px;
     color: #ffffff;
     margin-bottom: 20px;
+
+    @include breakpoint(mobile) {
+     font-size: 24px;
+    }
+
   }
 
   p{
@@ -170,6 +177,10 @@ header{
     opacity: 0.8;
     letter-spacing: 0.7px;
     color: #ffffff;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
   }
   a{
     font-size: 16px;
@@ -344,6 +355,8 @@ header{
   z-index: 20;
   background: #363b4a;
   padding: 20px 80px;
+  top:0;
+  left: 0;
 
   @include breakpoint(desktop) {
     padding: 20px 40px;
@@ -364,6 +377,19 @@ header{
     padding: 0;
     margin: 0;
 
+  }
+
+  i{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+    &:hover{
+      opacity: 0.7;
+    }
   }
 
   li:nth-child(1){
@@ -431,7 +457,7 @@ header{
 
 .mobile-menu-info{
   position: absolute;
-  bottom: 150px;
+  bottom: 100px;
   left: 80px;
 
    @include breakpoint(desktop) {

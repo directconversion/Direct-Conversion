@@ -88,7 +88,7 @@ $menu = array();
                 <?php foreach( $menu as $key => $m_item ) :  ?>
                     <?php $key == 0 ? $i = 1 : $i = 0;  ?>
                     <div style="display: none" class="change-productline <?php echo preg_replace('/\s+/', '', $m_item); ?> js-cone-grid-content">
-                        <p><?php echo  $menu[$i] . ' products'; ?><i class="material-icons">arrow_forward</i></p>
+                        <p><?php echo  $menu[$i]; ?><i class="material-icons">arrow_forward</i></p>
                     </div>
                 <?php endforeach; ?>
 

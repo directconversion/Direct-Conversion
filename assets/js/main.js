@@ -14,6 +14,14 @@ jQuery(document).ready( function($) {
 
     });
 
+
+    $('.closeHamburger').on('click', function(){
+
+        closeOpen($(this));
+
+    });
+
+
     // Hide Header on on scroll down
     var didScroll;
     var lastST = 0;
@@ -44,12 +52,10 @@ jQuery(document).ready( function($) {
         // If they scrolled down and are past the navbar, add class .nav-up.
         // This is necessary so you never see what is "behind" the navbar.
         if (st > lastST && st > navbarHeight){
-            console.log('Upp med header');
             // Scroll Down
             $('header').removeClass('nav-down').addClass('nav-up');
         } else {
             // Scroll Up
-            console.log('ner med header');
             if(st + $(window).height() < $(document).height()) {
                 $('header').removeClass('nav-up').addClass('nav-down');
             }
@@ -98,10 +104,20 @@ jQuery(document).ready( function($) {
         if (a.hasClass('is-active')) {
             $(".mobile-menu").fadeOut('fast');
             a.removeClass('is-active');
+            $("body").css({
+                height: 'auto',
+                overflow: 'visible'
+            });
+            $('.hamburger').removeClass('is-active');
         }
         else {
             a.addClass('is-active');
             $(".mobile-menu").fadeIn('fast');
+            $("body").css({
+                height: '100%',
+                overflow: 'hidden'
+            });
+            $('.closeHamburger').addClass('is-active');
 
         }
         //(function fadeNext(collection){
@@ -126,8 +142,8 @@ jQuery(document).ready( function($) {
     });
 
     $(window).on('resize', function (){
-        var hw = $('.people-grid-image').width();
-        $('.people-grid-image').css({'height':hw+'px'});
+        var pw = $('.people-grid-image').width();
+        $('.people-grid-image').css({'height':pw+'px'});
 
         var hw = $('.product-grid-content').width();
         $('.product-grid-content').css({'height':hw+'px'});
@@ -137,8 +153,8 @@ jQuery(document).ready( function($) {
     var cw = $('.about-grid-content').width();
     $('.about-grid-content').css({'height':cw+'px'});
 
-    var hw = $('.people-grid-image').width();
-    $('.people-grid-image').css({'height':hw+'px'});
+    var pw = $('.people-grid-image').width();
+    $('.people-grid-image').css({'height':pw+'px'});
 
     var hw = $('.product-grid-content').width();
     $('.product-grid-content').css({'height':hw+'px'});

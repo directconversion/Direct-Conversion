@@ -388,6 +388,7 @@
         <i class="material-icons hamburger">menu</i>
     </header>
     <div class="mobile-menu">
+        <i class="material-icons closeHamburger is-active">close</i>
         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'mobile-menu-content' ) ); ?>
         <div class="mobile-menu-info">
             <a href="#">info@directconversion.com</a>
