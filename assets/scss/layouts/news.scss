@@ -84,11 +84,11 @@
   background: #9b9b9b;
 }
 
-.load-news{
+.alm-btn-wrap{
   display: flex;
   justify-content: center;
 
-  a{
+  button{
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.6px;
@@ -96,6 +96,14 @@
     text-decoration: none;
     text-transform: uppercase;
     margin-top: 20px;
+    background-color: transparent !important;
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+
+    &:hover{
+      color: #4a90e2 !important;
+    }
 
     @include breakpoint(medium) {
       margin-top: 0;
