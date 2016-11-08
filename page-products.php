@@ -40,7 +40,7 @@ $menu = array();
                 <?php while( have_rows('products') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
                     <?php $productBranchClass =  preg_replace('/\s+/', '', get_sub_field('product-branch')); ?>
                     <?php $firstMenuItem =  preg_replace('/\s+/', '', $menu[0]); ?>
-                    <div class="product-grid-content js-cone-grid-content <?php echo $productBranchClass; ?>" style="background-image: url('<?php echo get_sub_field('product-image') ; ?>')">
+                    <div class="product-grid-content js-cone-grid-content <?php echo $productBranchClass; ?>" style="background-image: url('<?php the_sub_field('product-image') ; ?>')">
                         <div class="product-grid-overlay">
                             <p><?php echo get_sub_field('product-title') ; ?></p>
                         </div>
