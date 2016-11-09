@@ -142,10 +142,10 @@ jQuery(document).ready( function($) {
     });
 
     $(window).on('resize', function (){
-        var pw = $('.people-grid-image').width();
+        var pw = $('.activeImg').width();
         $('.people-grid-image').css({'height':pw+'px'});
 
-        var hw = $('.product-grid-content').width();
+        var hw = $('.activeImg').width();
         $('.product-grid-content').css({'height':hw+'px'});
     });
 
@@ -164,20 +164,22 @@ jQuery(document).ready( function($) {
     $('.js-cone-grid-content').each(function () {
         var activeItem = $('.active-hero-item').data('value');
         if ( $(this).hasClass(activeItem) ) {
-            //$(this).fadeIn('slow');
-            $(this).css({
-                'position': '',
-                'visibility': '',
-                'display': ''
-            });
+            $(this).addClass('activeImg');
+            $(this).fadeIn('slow');
+            // $(this).css({
+            //     'position': '',
+            //     'visibility': '',
+            //     'display': ''
+            // });
         }
         else{
-            //$(this).hide();
-            $(this).css({
-                'position': 'absolute',
-                'visibility': 'hidden',
-                'display': 'none'
-            });
+            $(this).removeClass('activeImg');
+            $(this).hide();
+            // $(this).css({
+            //     'position': 'absolute',
+            //     'visibility': 'hidden',
+            //     'display': 'none'
+            // });
         }
     });
 
@@ -188,20 +190,22 @@ jQuery(document).ready( function($) {
         $(this).addClass('active-hero-item');
         $('.js-cone-grid-content').each(function () {
             if ( $(this).hasClass(activeItem) ) {
-                //$(this).fadeIn('slow');
-                $(this).css({
-                    'position': '',
-                    'visibility': '',
-                    'display': ''
-                });
+                $(this).addClass('activeImg');
+                $(this).fadeIn('slow');
+                // $(this).css({
+                //     'position': '',
+                //     'visibility': '',
+                //     'display': ''
+                // });
             }
             else{
-                //$(this).hide();
-                $(this).css({
-                    'position': 'absolute',
-                    'visibility': 'hidden',
-                    'display': 'none'
-                });
+                $(this).removeClass('activeImg');
+                $(this).hide();
+                // $(this).css({
+                //     'position': 'absolute',
+                //     'visibility': 'hidden',
+                //     'display': 'none'
+                // });
             }
         });
     });
