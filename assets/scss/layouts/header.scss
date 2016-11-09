@@ -440,7 +440,7 @@ header{
     }
   }
   .menu-primary-menu-container{
-      height: calc(100% - 200px);
+      height: calc(100% - 100px);
       overflow: scroll;
   }
 }
@@ -457,7 +457,7 @@ header{
 
 .mobile-menu-info{
   position: absolute;
-  bottom: 100px;
+  bottom: 60px;
   left: 80px;
 
    @include breakpoint(desktop) {

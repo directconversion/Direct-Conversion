@@ -76,22 +76,12 @@ $menu = array();
             </div>
         </div>
         <div class="product-button">
-<!--             <?php if( have_rows('product-info') ): ?>
-                <?php while( have_rows('product-info') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
-                    <?php $productBranchClass =  preg_replace('/\s+/', '', get_sub_field('product-info-branch')); ?>
-                    <div style="display: none" class="<?php echo $productBranchClass; ?> js-cone-grid-content">
-                        <p><?php the_sub_field('product-info-branch') ?><i class="material-icons">arrow_forward</i></p>
-                    </div>
-                <?php endwhile; ?>
-            <?php endif; ?> -->
-
                 <?php foreach( $menu as $key => $m_item ) :  ?>
                     <?php $key == 0 ? $i = 1 : $i = 0;  ?>
                     <div style="display: none" class="change-productline <?php echo preg_replace('/\s+/', '', $m_item); ?> js-cone-grid-content">
                         <p><?php echo  $menu[$i]; ?><i class="material-icons">arrow_forward</i></p>
                     </div>
                 <?php endforeach; ?>
-
         </div>
     </section>
 </div>

@@ -172,7 +172,7 @@ jQuery(document).ready( function($) {
             $(this).css({
                 'position': 'absolute',
                 'visibility': 'hidden',
-                'display': 'block'
+                'display': 'none'
             });
         }
     });
@@ -191,7 +191,7 @@ jQuery(document).ready( function($) {
                 $(this).css({
                     'position': 'absolute',
                     'visibility': 'hidden',
-                    'display': 'block'
+                    'display': 'none'
                 });
             }
         });
