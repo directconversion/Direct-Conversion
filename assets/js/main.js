@@ -43,8 +43,8 @@ jQuery(document).ready( function($) {
         var st = $(this).scrollTop();
         // Make sure they scroll more than delta
         if(Math.abs(lastST - st) <= delta){
-            console.log(lastST);
-            console.log(st);
+            //console.log(lastST);
+            //console.log(st);
 
             return;
         }
@@ -165,9 +165,13 @@ jQuery(document).ready( function($) {
         var activeItem = $('.active-hero-item').data('value');
         if ( $(this).hasClass(activeItem) ) {
             //$(this).fadeIn('slow');
-            $(this).css('visibility', '');
-                $(this).attr('style', '');
-        }else{
+            $(this).css({
+                'position': '',
+                'visibility': '',
+                'display': ''
+            });
+        }
+        else{
             //$(this).hide();
             $(this).css({
                 'position': 'absolute',
@@ -185,8 +189,13 @@ jQuery(document).ready( function($) {
         $('.js-cone-grid-content').each(function () {
             if ( $(this).hasClass(activeItem) ) {
                 //$(this).fadeIn('slow');
-                $(this).attr('style', '');
-            }else{
+                $(this).css({
+                    'position': '',
+                    'visibility': '',
+                    'display': ''
+                });
+            }
+            else{
                 //$(this).hide();
                 $(this).css({
                     'position': 'absolute',
