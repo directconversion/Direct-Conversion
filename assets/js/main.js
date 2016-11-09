@@ -166,20 +166,10 @@ jQuery(document).ready( function($) {
         if ( $(this).hasClass(activeItem) ) {
             $(this).addClass('activeImg');
             $(this).fadeIn('slow');
-            // $(this).css({
-            //     'position': '',
-            //     'visibility': '',
-            //     'display': ''
-            // });
         }
         else{
             $(this).removeClass('activeImg');
             $(this).hide();
-            // $(this).css({
-            //     'position': 'absolute',
-            //     'visibility': 'hidden',
-            //     'display': 'none'
-            // });
         }
     });
 
@@ -189,23 +179,13 @@ jQuery(document).ready( function($) {
         $('.hero-item').removeClass('active-hero-item');
         $(this).addClass('active-hero-item');
         $('.js-cone-grid-content').each(function () {
+            $(this).hide();
             if ( $(this).hasClass(activeItem) ) {
                 $(this).addClass('activeImg');
                 $(this).fadeIn('slow');
-                // $(this).css({
-                //     'position': '',
-                //     'visibility': '',
-                //     'display': ''
-                // });
             }
             else{
                 $(this).removeClass('activeImg');
-                $(this).hide();
-                // $(this).css({
-                //     'position': 'absolute',
-                //     'visibility': 'hidden',
-                //     'display': 'none'
-                // });
             }
         });
     });
