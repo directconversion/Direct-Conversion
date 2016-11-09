@@ -31,5 +31,9 @@
   background-color: #fafafa;
   padding: 40px 50px 1px 50px;
   margin-top: 30px;
+
+  @include breakpoint(medium) {
+    padding: 40px 20px 1px 20px;
+  }
 }
 
