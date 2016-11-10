@@ -13,6 +13,9 @@
         <?php echo get_field('technology-content') ; ?>
         </div>
     </section>
+    <section class="tech-bottom" style="background-image: url('<?php echo get_field('tech-img') ?>')">
+
+    </section>
 </div>
 
 <?php get_footer() ; ?>

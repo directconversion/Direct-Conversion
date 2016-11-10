@@ -72,7 +72,7 @@ jQuery(document).ready( function($) {
     //console.log(lat);
     window.initMap = function() {
         var mapDiv = document.getElementById('map');
-        var company =  {lat: parseFloat(lat), lng: parseFloat(long)};
+        var company =  {lat: parseFloat(59.4019357), lng: parseFloat(18.03581059999999)};
         map = new google.maps.Map(mapDiv, {
             center: company,
             zoom: 16,

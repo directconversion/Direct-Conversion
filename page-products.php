@@ -59,7 +59,6 @@ $menu = array();
 
                         <?php echo get_sub_field('product-info-content') ; ?>
 
-                        <a href="#">more information</a>
                         </div>
                     <?php endwhile; ?>
                 <?php endif; ?>

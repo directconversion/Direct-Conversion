@@ -42,8 +42,12 @@
             <?php $recent_posts = wp_get_recent_posts( $args ); ?>
             <h4>Latest news</h4>
            <?php  foreach( $recent_posts as $recent ) : ?>
-               <h3><?php echo  $recent["post_title"] ?></h3>
-               <p><?php echo  wp_trim_excerpt( $recent['post_content']) ?></p>
+               <h3><?php echo  $recent["post_title"] ?>
+                   <a href="<?php echo get_permalink($recent["ID"]) ?>"></a>
+               </h3>
+               <p><?php echo  wp_trim_excerpt( $recent['post_content']) ?>
+               <a href="<?php echo get_permalink($recent["ID"]) ?>">read more</a>
+               </p>
            <?php endforeach; wp_reset_query(); ?>
 
         </div>
