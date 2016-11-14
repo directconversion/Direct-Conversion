@@ -30,9 +30,9 @@
         <div class="footer-sections">
             <h4>Get in touch</h4>
             <h6>Technical Support</h6>
-            <a href="mailto:info@xcounter.com">info@xcounter.com</a>
+            <a href="mailto:info@directconversion.com">info@directconversion.com</a>
             <h6 class="mt">Sales</h6>
-            <a href="mailto:sales@xcounter.com">sales@xcounter.com</a>
+            <a href="mailto:sales@directconversion.com">sales@directconversion.com</a>
             <h4>Accreditations</h4>
             <span>ISO 13485:2012</span>
             <span>ISO 9001:2008</span>
