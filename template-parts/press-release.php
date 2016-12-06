@@ -12,7 +12,7 @@
 
 <?php if ( $loop->have_posts() ) : ?>
     <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-        <div class="news-grid slide-effect release-grid">
+        <div class="news-grid release-grid">
             <a target="_blank" href="<?php echo get_field('pdf') ?>"></a>
             <div class="news-date">
                 <span><?php echo get_the_date() ; ?></span>
