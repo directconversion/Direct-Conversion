@@ -144,8 +144,9 @@ jQuery(document).ready( function($) {
     $(window).on('resize', function (){
         var pw = $('.activeImg').width();
         $('.people-grid-image').css({'height':pw+'px'});
-
         var hw = $('.activeImg').width();
+        $('.product-grid-content').css({'height':hw+'px'});
+        var hw = $('.product-grid-content').width();
         $('.product-grid-content').css({'height':hw+'px'});
     });
 
@@ -191,7 +192,7 @@ jQuery(document).ready( function($) {
     });
 
     $('body').on('click', '.change-productline',function () {
-        $('.active-hero-item').siblings('.hero-item').trigger('click');        
+        $('.active-hero-item').siblings('.hero-item').trigger('click');
     });
 
     // Open biography-modal
@@ -254,6 +255,17 @@ jQuery(document).ready( function($) {
         });
 
     });
+
+    $('.hero-item a').on('click', function(e){
+        e.preventDefault();
+        //Get section name from href
+        var url = $(this).attr('href');
+        var hash = url.substring(url.indexOf('#'));
+        //Scroll to section
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800);
+    })
 
 });
 

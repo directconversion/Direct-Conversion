@@ -131,7 +131,6 @@
 
 .product-info{
   display: flex;
-  margin-top: 30px;
 
   @include breakpoint(medium) {
     flex-direction: column;
@@ -139,7 +138,7 @@
 }
 
 .product-grid-content{
-  width: calc(14.28% - 30px);
+  width: calc(25% - 30px);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,13 +148,6 @@
   background-color: white;
   margin: 0 30px 30px 0 ;
 
-  @include breakpoint(xl) {
-    width: calc(20% - 30px);
-  }
-
-  @include breakpoint(medium) {
-    width: calc(25% - 30px);
-  }
   @include breakpoint(mobile) {
     width: calc(33.3% - 20px);
     margin: 0 20px 30px 0;
