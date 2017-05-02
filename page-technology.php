@@ -13,8 +13,18 @@
         <?php echo get_field('technology-content') ; ?>
         </div>
     </section>
-    <section class="tech-bottom" style="background-image: url('<?php echo get_field('tech-img') ?>')">
-
+    <section class="tech-bottom">
+        <div class="half-left">
+            <h3>Journal Papers, Technical Reports, Patents</h3>
+            <?php if( have_rows('pdfs') ): ?>
+                <?php while( have_rows('pdfs') ) : the_row(); remove_filter('acf_the_content', 'wpautop'); ?>
+                    <a target="_blank" href="<?php the_sub_field('pdf-file') ; ?>"><?php the_sub_field('pdf-title') ; ?></a>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+        <div class="half-right" style="background-image: url('')">
+            <img src="<?php echo get_field('tech-img') ?>">
+        </div>
     </section>
 </div>
 
