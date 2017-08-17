@@ -54,6 +54,28 @@ $menu = array();
 
         </div>
     </div>
+    <div class="logos-slide-section">
+        <h2>Our distributors:</h2>
+        <div class="test">
+            <div class="logos-slide">
+                <?php if( have_rows('distributors') ): ?>
+                    <?php while( have_rows('distributors') ) : the_row();?>
+                        <a href="<?php the_sub_field('distributors-link') ; ?>" target="_blank" title="<?php the_sub_field('distributors-company') ; ?>">
+                            <img src="<?php the_sub_field('distributors-logo') ; ?>">
+                        </a>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+                <?php if( have_rows('distributors') ): ?>
+                    <?php while( have_rows('distributors') ) : the_row();?>
+                        <a href="<?php the_sub_field('distributors-link') ; ?>" target="_blank" title="<?php the_sub_field('distributors-company') ; ?>">
+                            <img src="<?php the_sub_field('distributors-logo') ; ?>">
+                        </a>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <?php get_footer() ; ?>
