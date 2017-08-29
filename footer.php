@@ -49,7 +49,14 @@
                <a href="<?php echo get_permalink($recent["ID"]) ?>">read more</a>
                </p>
            <?php endforeach; wp_reset_query(); ?>
-
+            <div class="footer-icons">
+                <a href="https://www.linkedin.com/company/18038816/">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC-nRMr2Z7pNUaaXBjH2rj_w">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+            </div>
         </div>
     </section>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXWF-zTaNyT5bR64le1M2Xrp7P6_8Shtw&callback=initMap" type="text/javascript"></script>

@@ -25,6 +25,7 @@ if ( post_password_required() ) {
         wp_list_comments( array(
             'style' => 'ul',
         ) );
+
     ?>
 
     <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>

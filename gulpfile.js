@@ -11,7 +11,7 @@ var rename = require('gulp-rename');
 //var bourbon = require('node-bourbon').includePaths;
 //var neat = require('node-neat').includePaths;
 
-gulp.task('default', ['css', 'watch', 'js']);
+gulp.task('default', ['css', 'watch', 'js', 'blog']);
 
 gulp.task('css', function(){
     return gulp.src('./assets/scss/app.scss')
@@ -36,7 +36,17 @@ gulp.task('js', function(){
 
 });
 
+gulp.task('blog', function(){
+    return gulp.src('./assets/js/blog/*.js')
+        .pipe(concat('blog.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('assets/js/src'))
+        .pipe(notify({message: 'good job guy, blog looks sharp!'}));
+
+});
+
 gulp.task('watch', function(){
     gulp.watch('./assets/scss/**/*.scss', ['css']);
     gulp.watch('./assets/js/*.js', ['js']);
+    gulp.watch('./assets/js/blog/*.js', ['blog']);
 });
