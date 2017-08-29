@@ -50,11 +50,14 @@
                </p>
            <?php endforeach; wp_reset_query(); ?>
             <div class="footer-icons">
-                <a href="https://www.linkedin.com/company/18038816/">
+                <a target="_blank" href="https://www.linkedin.com/company/18038816/">
                     <i class="fa fa-linkedin-square" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.youtube.com/channel/UC-nRMr2Z7pNUaaXBjH2rj_w">
-                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                <a target="_blank" href="https://www.youtube.com/channel/UC-nRMr2Z7pNUaaXBjH2rj_w">
+                    <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                </a>
+                <a target="_blank" href="https://twitter.com/DirectConv">
+                    <i class="fa fa-twitter-square" aria-hidden="true"></i>
                 </a>
             </div>
         </div>
