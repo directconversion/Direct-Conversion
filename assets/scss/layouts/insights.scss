@@ -37,6 +37,14 @@
   align-items: center;
   justify-content: space-between;
 
+  @include breakpoint(small) {
+    top: 5px;
+
+    svg{
+      width: 180px;
+    }
+  }
+
   img{
     height: 22px;
   }
@@ -66,6 +74,10 @@
   min-height: 180px;
   display: flex;
   align-items: center;
+
+  @include breakpoint(mobile) {
+    padding: 110px 0 80px;
+  }
 
   h1{
     font-size: 44px;
