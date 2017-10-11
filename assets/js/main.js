@@ -256,7 +256,7 @@ jQuery(document).ready( function($) {
 
     });
 
-    $('.hero-item a').on('click', function(e){
+    $('.hero-item a, .event-hero-content a').on('click', function(e){
         e.preventDefault();
         //Get section name from href
         var url = $(this).attr('href');

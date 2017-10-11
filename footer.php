@@ -15,6 +15,7 @@
             <a href="<?php echo home_url('/products')?>">Products</a>
             <a href="<?php echo home_url('/news')?>">News</a>
             <a href="<?php echo home_url('/contact-us')?>">Contact</a>
+            <a href="<?php echo home_url('/insights')?>">Insights</a>
         </div>
         <div class="footer-sections">
             <h4>XCOUNTER</h4>

@@ -221,4 +221,4 @@
 
         </div>
     </div>
-    <div class="all-content">
+    <div class="all-content <?php if(is_page_template('page-templates/event.php')) : ?>event-background<?php endif ; ?>">
