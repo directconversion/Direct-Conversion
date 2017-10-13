@@ -129,19 +129,15 @@
 
 .meeting-grid{
   display: flex;
-  max-width: 1060px;
+  max-width: 600px;
   margin: 0 auto;
-
-  @include breakpoint(laptop) {
-    flex-direction: column;
-  }
 }
 
 .meeting-content{
   border: 1px solid #C9C9C9;
   border-radius: 5px;
   background-color: #F6F6F6;
-  width: 50%;
+  width: 100%;
   padding: 22px 38px 25px;
 
   @include breakpoint(large) {
@@ -149,14 +145,6 @@
   }
   @include breakpoint(laptop) {
     width: calc(100% - 30px);
-  }
-
-  &:first-child{
-    margin-right: 28px;
-
-    @include breakpoint(laptop) {
-      margin: 0 0 28px 0;
-    }
   }
 
   h4{
@@ -276,4 +264,112 @@
 
 .event-background{
   background: white;
+}
+
+.apester-active{
+  iframe{
+    height: 100%;
+    margin-top: 30px;
+  }
+}
+
+.lightbox-section{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.lightbox{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 35px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+  position: relative;
+  opacity: 0;
+  top: -100px;
+  transition: 0.2s ease-in-out;
+
+  @include breakpoint(small) {
+    height: 100vh;
+    padding: 35px 20px;
+    max-width: 100%;
+  }
+
+  h5{
+    font-size: 24px;
+    margin: 30px 0 20px;
+  }
+  p{
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+  }
+
+  input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 20px;
+    color: #297FB7;
+    margin-bottom: 15px;
+  }
+  input[type=submit]{
+    width: auto;
+    float: right;
+    border: none;
+    background: #297FB7;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+    border-radius: 3px;
+  }
+}
+
+.fade-lightbox{
+  opacity: 1;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.lightbox-icon{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #297FB7;
+  border-radius: 100%;
+  border: 4px solid white;
+  color: white;
+  font-size: 29px;
+
+  @include breakpoint(small) {
+    display: none;
+  }
+}
+
+.close-lightbox{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover{
+    opacity: 0.6;
+  }
 }

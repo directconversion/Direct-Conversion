@@ -256,7 +256,7 @@ jQuery(document).ready( function($) {
 
     });
 
-    $('.hero-item a, .event-hero-content a').on('click', function(e){
+    $('.hero-item a').on('click', function(e){
         e.preventDefault();
         //Get section name from href
         var url = $(this).attr('href');
@@ -266,6 +266,22 @@ jQuery(document).ready( function($) {
             scrollTop: $(hash).offset().top
         }, 800);
     })
+
+    //Open lightbox on click
+    $('.event-hero-content a, .meeting-content a').on('click', function(e){
+        e.preventDefault();
+        $('.lightbox-section').css('display', 'flex');
+        setTimeout(function(){
+            $('.lightbox').addClass('fade-lightbox');
+        }, 100);
+    })
+
+    //CLose lightbox on click
+    $(document).on('click', '.close-lightbox',function(){
+        $('.lightbox-section').fadeOut('fast');
+        $('.lightbox').removeClass('fade-lightbox');
+    });
+
 
 });
 

@@ -5,12 +5,24 @@
 ?>
 <?php get_header() ; ?>
 
+<div class="lightbox-section">
+    <div class="lightbox">
+        <i class="material-icons close-lightbox">close</i>
+        <div class="lightbox-icon">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </div>
+        <h5>Let's have a talk at RSNA!</h5>
+        <p>Submit your information below and we will contact you as soon as possible.</p>
+        <?php echo do_shortcode('[contact-form-7 id="332" title="Register"]') ; ?>
+    </div>
+</div>
+
 <section class="hero event-hero" style="background-image: url('<?php  the_post_thumbnail_url(); ?>')">
     <div class="hero-overlay"></div>
     <div class="hero-content event-hero-content">
         <h1><?php echo get_field('hero-title') ; ?> </h1>
         <p><?php echo get_field('hero-text') ; ?> </p>
-        <a href="#meeting-section">Scheduele a Meeting</a>
+        <a href="#meeting-section">Schedule a Meeting</a>
     </div>
 </section>
 <section class="event-section">
@@ -46,14 +58,14 @@
                     <h4><?php the_sub_field('schedule-headline') ; ?></h4>
                     <span><?php the_sub_field('schedule-info') ; ?></span>
                     <p><?php the_sub_field('schedule-time') ; ?></p>
-                    <a target="_blank" href="<?php the_sub_field('schedule-link') ; ?>"><?php the_sub_field('schedule-link-text') ; ?></a>
+                    <a  href="<?php the_sub_field('schedule-link') ; ?>"><?php the_sub_field('schedule-link-text') ; ?></a>
                 </div>
             <?php endwhile; ?>
         <?php endif; ?>
     </div>
-    <div class="apester-section slide-effect">
-        <?php the_field('apester-content') ; ?>
-    </div>
+<!--    <div class="apester-section slide-effect">-->
+<!--        --><?php //the_field('apester-content') ; ?>
+<!--    </div>-->
     <div class="event-author slide-effect">
         <div class="event-author-img" style="background-image: url('http://xcounter.com/wp-content/uploads/2016/11/nat.jpg')"></div>
         <div>
