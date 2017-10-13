@@ -13,7 +13,7 @@
         </div>
         <h5>Let's have a talk at RSNA!</h5>
         <p>Submit your information below and we will contact you as soon as possible.</p>
-        <?php echo do_shortcode('[contact-form-7 id="332" title="Register"]') ; ?>
+        <?php echo do_shortcode('[contact-form-7 id="496" title="Register"]') ; ?>
     </div>
 </div>
 
