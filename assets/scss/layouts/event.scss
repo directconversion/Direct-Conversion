@@ -302,6 +302,7 @@
     height: 100vh;
     padding: 35px 20px;
     max-width: 100%;
+    box-sizing: border-box;
   }
 
   h5{
@@ -368,6 +369,10 @@
   opacity: 0.3;
   cursor: pointer;
   transition: opacity 0.2s ease-in-out;
+
+  @include breakpoint(small) {
+    top:30px;
+  }
 
   &:hover{
     opacity: 0.6;
