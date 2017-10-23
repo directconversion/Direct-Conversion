@@ -62,6 +62,10 @@
                 </a>
             </div>
         </div>
+        <div class="event-footer-link">
+            <p>Come visit us at <span>RSNA</span></p>
+            <a href="<?php echo home_url('/rsna-chicago-2017')?>">Read more</a>
+        </div>
     </section>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXWF-zTaNyT5bR64le1M2Xrp7P6_8Shtw&callback=initMap" type="text/javascript"></script>
 </body>

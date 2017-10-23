@@ -1,16 +1,17 @@
 .footer{
-  padding: 20px 80px 50px 80px;
+  padding: 20px 80px 135px;
   background-color: #363b4a;
   display: flex;
   justify-content: space-between;
+  position: relative;
 
   @include breakpoint(desktop) {
     flex-wrap: wrap;
-    padding: 20px 40px 50px 40px;
+    padding: 20px 40px 135px 40px;
   }
    @include breakpoint(mobile) {
      flex-direction: column-reverse;
-     padding: 20px 20px 50px 20px;
+     padding: 20px 20px 135px 20px;
   }
 }
 
@@ -115,5 +116,38 @@
   a{
     font-size: 21px;
     margin: 0 10px 0 0;
+  }
+}
+
+.event-footer-link{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  height: 80px;
+  background: rgba(0,0,0,0.5);
+
+  p{
+    color: white;
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+  }
+  span{
+    font-weight: bold;
+  }
+  a{
+    color: #333;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #FFF;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    text-decoration: none;
   }
 }
