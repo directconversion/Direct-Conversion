@@ -11,7 +11,7 @@
         <div class="lightbox-icon">
             <i class="fa fa-envelope-o" aria-hidden="true"></i>
         </div>
-        <h5>Let's have a talk at RSNA!</h5>
+        <h5><?php the_field('lightbox-headline') ; ?></h5>
         <p>Submit your information below and we will contact you as soon as possible.</p>
         <?php echo do_shortcode('[contact-form-7 id="496" title="Register"]') ; ?>
     </div>
