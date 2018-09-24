@@ -36,7 +36,7 @@
             <a href="mailto:sales@directconversion.com">sales@directconversion.com</a>
             <h4>Accreditations</h4>
             <a target="_blank" href="http://directconversion.com/wp-content/uploads/2017/04/Certificate-13485-en.pdf">ISO 13485:2012</a>
-            <a target="_blank" href="http://directconversion.com/wp-content/uploads/2017/04/Certificate-9001-en.pdf">ISO 9001:2008</a>
+<!--            <a target="_blank" href="http://directconversion.com/wp-content/uploads/2017/04/Certificate-9001-en.pdf">ISO 9001:2008</a>-->
         </div>
         <div class="footer-sections">
             <?php $args = array( 'numberposts' => '1' ); ?>
